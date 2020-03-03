@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :character_junks
+  resources :junks
    resources :users
    resources :character_jobs
    resources :characters

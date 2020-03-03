@@ -1,0 +1,2 @@
+class CharacterJunksController < ApplicationController
+end

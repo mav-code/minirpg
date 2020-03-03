@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  junk_id: MyString
+  integer,: MyString
+  character_id: MyString
+  integer: MyString
+
+two:
+  junk_id: MyString
+  integer,: MyString
+  character_id: MyString
+  integer: MyString

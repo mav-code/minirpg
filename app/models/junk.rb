@@ -1,0 +1,2 @@
+class Junk < ApplicationRecord
+end
