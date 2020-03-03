@@ -1,0 +1,2 @@
+class CharacterJobsController < ApplicationController
+end
