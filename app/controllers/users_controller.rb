@@ -1,10 +1,4 @@
 class UsersController < ApplicationController
-
-
-
-
-
-
     skip_before_action :authenticate!
   
     def new
@@ -22,6 +16,10 @@ class UsersController < ApplicationController
         flash[:errors] = @user.errors.full_messages
         redirect_to new_user_path
       end
+    end
+
+    def show
+      @user = User.find(params[:id])
     end
   
     private
