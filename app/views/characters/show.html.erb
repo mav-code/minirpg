@@ -1,1 +1,27 @@
-character show page
+<h1> <%= @character.name %> </h1>
+<br>
+<br>
+
+     Classes: 
+        <ul>
+            <% @character.jobs.each do |job| %>
+                <li>
+                    <%= job.name %>
+                </li>
+                <br>
+            <% end %>
+        <br>
+        </ul>
+        Items:
+        <ul>
+            <% @character.junks.each do |junk| %>
+                <li>
+                    <%= junk.name %>
+                </li>
+                <br>
+            <% end %>
+        <br>
+        </ul>
+
+
+Here will be choices, leading to progression

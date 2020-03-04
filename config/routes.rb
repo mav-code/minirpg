@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :hooks
    get '/', to: "users#index", as: 'welcome' 
  #  resources :character_junks
    resources :junks
