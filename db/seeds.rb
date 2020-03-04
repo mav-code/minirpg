@@ -6,9 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+####### TEST DATA ####################################################
 dungeonmaster = User.create(username: "gary", password_digest: "gygax")
-
 demiurge = Character.create(name: "Michael", user_id: dungeonmaster.id)
 
 warrior = Job.create(name: "Warrior")
@@ -23,6 +22,18 @@ lenses = Junk.create(name: "Contact Lenses", description: "They help you see, ma
 
 CharacterJunk.create(character_id: demiurge.id, junk_id: tome.id)
 
+####### REAL DATA? ##################################################
 
-# test1 = Character.create(name: "honk honk")
-# test2 = Character.create(name: "bark bark")
+nerd = Job.create(name: "Antisocial Loser")
+    gamer = Job.create(name: "Gamer", parent_id: nerd.id)
+        mtg = Job.create(name: "Magic: The Gathering Player", parent_id: gamer.id)
+    bookworm = Job.create(name: "Bookworm", parent_id: nerd.id)
+        potter = Job.create(name: "Wizard School Student", parent_id: bookworm.id)
+        wiccan = Job.create(name: "Wiccan", parent_id: bookworm.id)
+    actor = Job.create(name: "Theater Kid", parent_id: nerd.id)
+        stage = Job.create(name: "Stage Magician", parent_id: actor.id)
+        fortune = Job.create(name: "Fortune Teller", parent_id: actor.id)
+            sooth = Job.create(name: "Soothsayer", parent_id: fortune.id)
+                druid = Job.create(name: "Druid", parent_id: sooth.id)
+                    shaman = Job.create(name: "Shaman", parent_id: druid.id)
+
