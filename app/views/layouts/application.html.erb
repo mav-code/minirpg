@@ -6,19 +6,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-
-
-
-
     <header>
       <% if @logged_in %>
         Hello, <%= @logged_in_user.username.titleize %>, you're logged in!!
         <%= button_to "Log out", log_out_path, method: :delete %>
-        You have <%= @logged_in_user.# -  characters %> characters to play with.
+  <%#<!--You have <%= @logged_in_user.# -  characters -->%>
       <% else %>
         <%= link_to "Log in", new_login_path %>
         <%= link_to "Sign up", new_user_path %>
@@ -42,8 +36,7 @@
 
     </header>
 
-
-
     <%= yield %>
+
   </body>
 </html>
