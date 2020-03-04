@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
         
         if @logged_in
           @logged_in_user = User.find(@logged_in_user_id) 
-          @can_vote = @logged_in_user.can_vote
+         
         end
       end
     
