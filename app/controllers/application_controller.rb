@@ -1,11 +1,8 @@
 class ApplicationController < ActionController::Base
     
-    #  before_action :set_up_auth_stuff
-    #  before_action :authenticate!
+      before_action :set_up_auth_stuff
+      before_action :authenticate!
     
-     def index
-
-     end
 
       private
     

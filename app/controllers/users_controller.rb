@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
 
-
-
-
-
-
     skip_before_action :authenticate!
   
     def new
@@ -12,9 +7,6 @@ class UsersController < ApplicationController
     end
   
     def create
-      # @user = User.new(username: user_params[:username])
-      # @user.password = user_params[:password]
-      # @user.save
       @user = User.create(user_params)
       if @user.valid?
         redirect_to colors_path
@@ -30,10 +22,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:username, :password)
     end
 
-
-
-
-
-
-    
 end

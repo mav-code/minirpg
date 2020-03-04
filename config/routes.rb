@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-   root 'application#index'
+   get '/', to: "users#index", as: 'welcome' 
  #  resources :character_junks
    resources :junks
  #  resources :character_jobs
