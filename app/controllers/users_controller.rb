@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     def create
       @user = User.create(user_params)
       if @user.valid?
-        redirect_to colors_path
+        redirect_to @user
       else
         flash[:errors] = @user.errors.full_messages
         redirect_to new_user_path
