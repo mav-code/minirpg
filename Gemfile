@@ -52,3 +52,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added at 2019-04-15 10:57:07 -0400 by graham.troyer-joy:
+gem "rb-readline", "~> 0.5.5"
+
+# Added at 2019-05-07 11:29:15 -0400 by graham.troyer-joy:
+gem "bcrypt", "~> 3.1"
