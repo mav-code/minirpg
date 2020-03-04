@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+ img {
+  margin: 0;
+  padding: 0;
+  background: #000 linear-gradient(#222, #666) fixed;
+  
+}
  body {
     margin: 0;
     padding: 0;
@@ -54,40 +59,7 @@
     user-select: none;
   }
   .color, form input {
-    box-shadow: 0 15px 50px #00000033;
-  }
-  .votes {
-    font-family: 'Arial Rounded MT Bold', sans-serif;
-    font-size: 18px;
-    font-weight: normal;
-    display: block;
-    margin-top: 10px;
-    vertical-align: middle;
-    font-style: normal;
-  }
-  .votes form {
-    display: inline;
-  }
-  .votes button {
-    border: none;
-    background: #00000055;
-    border-radius: 10px;
-    padding: 0 5px;
-    font-size: 18px;
-    outline: none;
-    transition: transform .5s, background .5s;
-    margin-left: 5px;
-  }
-  .votes button:hover {
-    background: #ffffffdd;
-  }
-  .votes button:focus {
-    box-shadow: 0 0 0px 3px #fff;
-    transform: rotate(360deg);
-  }
-  .votes button.nope .vote,
-  .votes button.vote .nope {
-    display: none;
+    box-shadow: 0 15px 35px #00000033;
   }
   .message, .errors {
     font-size: 18px;
@@ -103,13 +75,13 @@
     background-color: #ff000055;
   }
   .auth-nav {
-    font-size: 18px;
+    font-size: 15px;
     text-align: right;
   }
   .auth-nav li {
     list-style-type: none;
     display: inline;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   a,
   .auth-nav a, 
@@ -125,7 +97,7 @@
     text-decoration: underline;
     border-radius: 0;
     display: inline;
-    font-size: 18px;
+    font-size: 15px;
     box-shadow: none;
   }
   a,
