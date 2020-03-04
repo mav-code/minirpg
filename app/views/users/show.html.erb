@@ -1,3 +1,6 @@
+<style>
+  body { background-image: url(<%= asset_path 'img_0518.jpg' %>) }
+</style>
 <h1> <%= @user.username %>'s past characters: </h1>
 
 <ul>
@@ -30,4 +33,7 @@
   <% end %>
 </ul>
 
-<a href="/characters/new">New Character</a>
+
+<h2><%= link_to "Create A New Character", new_character_path%></h2>
+
+
