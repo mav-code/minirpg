@@ -9,7 +9,7 @@ class LoginController < ApplicationController
       user = User.find_by(username: params[:username])
       if user && user.authenticate(params[:password]) # right person
         session[:user_id] = user.id
-        redirect_to colors_path
+        redirect_to user
       else
         flash[:errors] = ["Username or password did not match"]
         redirect_to new_login_path
@@ -25,4 +25,3 @@ class LoginController < ApplicationController
   
   
   end
-  
