@@ -4,7 +4,7 @@ Rails.application.routes.draw do
  #  resources :character_junks
    resources :junks
  #  resources :character_jobs
-   resources :characters, only: [:show, :destroy]
+   resources :characters, only: [:show, :new, :create, :destroy]
    resources :jobs
    resources :users, only: [:index, :new, :create, :show]
    resources :login, only: [:new, :create]

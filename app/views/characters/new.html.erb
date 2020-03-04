@@ -1,0 +1,8 @@
+Creating a new character
+
+<%= form_with model: @character do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %><br />
+        <p></p>
+    <%= f.submit "Begin!" %>
+  <% end %>

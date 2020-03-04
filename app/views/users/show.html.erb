@@ -1,1 +1,33 @@
-USER SHOW PAGE
+<h1> <%= @user.username %>'s past characters: </h1>
+
+<ul>
+  <% @user.characters.each do |character| %>
+    <li>
+      <%= link_to character.name, character %>
+      <br>
+      Classes: 
+        <ul>
+            <% character.jobs.each do |job| %>
+                <li>
+                    <%= job.name %>
+                </li>
+                <br>
+            <% end %>
+        <br>
+        </ul>
+        Items:
+        <ul>
+            <% character.junks.each do |junk| %>
+                <li>
+                    <%= junk.name %>
+                </li>
+                <br>
+            <% end %>
+        <br>
+        </ul>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<a href="/characters/new">New Character</a>

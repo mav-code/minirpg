@@ -7,7 +7,7 @@ class LoginController < ApplicationController
   
     def create
       user = User.find_by(username: params[:username])
-      if user && user.authenticate(params[:password]) # right person
+      if user && user.authenticate(params[:password])
         session[:user_id] = user.id
         redirect_to user
       else
@@ -19,7 +19,7 @@ class LoginController < ApplicationController
     def destroy
       
       session[:user_id] = nil
-      flash[:notification] = "You have been logged tf out"
+      flash[:notification] = "We'll be seeing you again"
       redirect_to new_login_path
     end
   

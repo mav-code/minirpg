@@ -10,7 +10,7 @@
   <body>
     <header>
       <% if @logged_in %>
-        Hello, <%= @logged_in_user.username.titleize %>, you're logged in!!
+        Welcome, young <%= @logged_in_user.username.titleize %>...
         <%= button_to "Log out", log_out_path, method: :delete %>
   <%#<!--You have <%= @logged_in_user.# -  characters -->%>
       <% else %>

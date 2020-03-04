@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
     
-      before_action :set_up_auth_stuff
+      before_action :auths
       before_action :authenticate!
     
 
       private
     
-      def set_up_auth_stuff
+      def auths
         @logged_in_user_id = session[:user_id]
         @logged_in = !!@logged_in_user_id
     
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     
       def authenticate!
         unless @logged_in
-          flash[:errors] = [ "You must log in to do that" ]
+          flash[:errors] = [ "Log in first!" ]
           redirect_to new_login_path
         end
       end
