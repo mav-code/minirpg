@@ -4,7 +4,7 @@ class CreateHooks < ActiveRecord::Migration[6.0]
       t.string :prompt
       t.string :description
       t.string :result
-      t.integer :class_id
+      t.integer :job_id
 
       t.timestamps
     end

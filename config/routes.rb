@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :hooks
    get '/', to: "users#index", as: 'welcome' 
  #  resources :character_junks
-   resources :junks
- #  resources :character_jobs
-   resources :characters, only: [:show, :new, :create, :destroy]
+ #  resources :junks
+   resources :character_jobs, only: [:create]
+   resources :characters, only: [:show, :new, :create, :destroy, :update]
    resources :jobs
    resources :users, only: [:index, :new, :create, :show]
    resources :login, only: [:new, :create]

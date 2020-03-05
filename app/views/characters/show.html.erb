@@ -4,7 +4,7 @@
 
      Classes: 
         <ul>
-            <% @character.jobs.each do |job| %>
+            <% @jobs[1..-1].each do |job| %>
                 <li>
                     <%= job.name %>
                 </li>
@@ -12,16 +12,8 @@
             <% end %>
         <br>
         </ul>
-        Items:
-        <ul>
-            <% @character.junks.each do |junk| %>
-                <li>
-                    <%= junk.name %>
-                </li>
-                <br>
-            <% end %>
-        <br>
-        </ul>
 
-
-Here will be choices, leading to progression
+<%= form_for @character do |f| %>
+    <%= collection_select(:character, :hook_ids, @character_hooks, :id, :prompt, {:prompt => 'What would you like to do?'}) %>
+    <%= f.submit %>
+<% end %>

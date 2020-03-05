@@ -2,7 +2,7 @@ Creating a new character
 
 <%= form_with model: @character do |f| %>
         <%= f.label :name %>
-        <%= f.text_field :name %><br />
-        <p></p>
+        <%= f.text_field :name %><br/>
+        <%= f.hidden_field @character.jobs, :value => Job.find(1) %>
     <%= f.submit "Begin!" %>
   <% end %>

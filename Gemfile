@@ -58,3 +58,5 @@ gem "rb-readline", "~> 0.5.5"
 
 # Added at 2019-05-07 11:29:15 -0400 by graham.troyer-joy:
 gem "bcrypt", "~> 3.1"
+
+gem 'figlet', '~> 1.1'
