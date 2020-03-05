@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_221055) do
     t.string "prompt"
     t.string "description"
     t.string "result"
-    t.integer "class_id"
+    t.integer "job_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
