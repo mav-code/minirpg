@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
+    <h4>
       <% if @logged_in %>
         Welcome, young <%= @logged_in_user.username.titleize %>...
         <%= button_to "Log out", log_out_path, method: :delete %>
@@ -20,7 +20,8 @@
 
       <% if @notification %> 
         <p class="message">
-          <%= @notification %>
+          <%= @notification.html_safe %>
+      
         </p>
       <% end %>
 
@@ -29,12 +30,13 @@
         <% @errors.each do |error| %>
         <li>
           <%= error %>
+          
         </li>
         <% end %>
       </ul>
       <% end %>
 
-    </header>
+    </h4>
 
     <%= yield %>
 

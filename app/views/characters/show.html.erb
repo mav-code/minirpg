@@ -1,17 +1,7 @@
-<style>
-  body { background-image: url(<%= asset_path 'img_0518.jpg' %>);
-         height: 100%;
-         background-position: center;
-         background-repeat: no-repeat;
-         background-size: cover;
-       }
-  ul { padding-right: 20px;
-       padding-left: 20px;
-     }
-  li { list-style-position: inside;
-       text-align: center;
-       padding-left: 20px;
-     }
+<body>
+<h1> <%= @character.name %> </h1>
+
+<br>
 
 </style>
 
@@ -27,5 +17,7 @@
         
 <h3><%= form_for @character do |f| %>
     <%= collection_select(:character, :hook_ids, @character_hooks, :id, :prompt, {:prompt => 'What would you like to do?'}) %>
-    <%= f.submit %></h3>
+    <%= f.submit 'Go!' %>
 <% end %>
+
+</body>

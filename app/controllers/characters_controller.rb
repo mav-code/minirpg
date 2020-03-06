@@ -3,7 +3,6 @@ class CharactersController < ApplicationController
 
     def show
         @character = Character.find(params[:id])
-
         @jobs = @character.jobs
         @character_hooks = @jobs.map{|job| job.hooks}.flatten
     end
@@ -22,7 +21,7 @@ class CharactersController < ApplicationController
         @character = Character.find(params[:id])
         flash[:notification] = Hook.find(params[:character][:hook_ids]).description
         if !CharacterJob.find_by(character_id: @character.id, job_id: Hook.find(params[:character][:hook_ids]).result[:newjob].id)
-        CharacterJob.create(character_id: @character.id, job_id: Hook.find(params[:character][:hook_ids]).result[:newjob].id)
+            CharacterJob.create(character_id: @character.id, job_id: Hook.find(params[:character][:hook_ids]).result[:newjob].id)
         end
         redirect_to character_path(@character)
     end

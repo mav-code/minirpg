@@ -5,26 +5,25 @@
          background-repeat: no-repeat;
          background-size: cover;
        }
-  ul { padding-right: 20px;
-       padding-left: 20px;
-     }
-  li { list-style-position: inside;
-       text-align: center;
-       padding-left: 20px;
-     }
 
 </style>
 <h1> <%= @user.username %>'s past characters: </h1>
 
-<ul>
-   <li>
+<ul class= "characters">
       <% @user.characters.each do |character| %>
+      <li class="character" style="background-color: #282828;">
       <%= link_to character.name, character %>
-      <h3>Classes </h3>
-          <% character.jobs.each do |job| %>
-          <p align="center"><%= job.name %></p>
-   </li>
+      <p>Classes: </p>
+      <ul>
+         <li>
+            <% character.jobs[1..-1].each do |job| %>
+            <p><%= job.name %></p>
+        </li>
             <% end %>
+        <br>
+        </li>
+        </ul>
+    <br>
   <% end %>
 </ul>
 
