@@ -3,7 +3,6 @@ class CharactersController < ApplicationController
 
     def show
         @character = Character.find(params[:id])
-        @string = "<h1> Hey </h1>".html_safe
         @jobs = @character.jobs
         @character_hooks = @jobs.map{|job| job.hooks}.flatten
     end
