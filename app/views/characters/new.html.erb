@@ -1,4 +1,20 @@
-Creating a new character
+<style>
+  body { background-image: url(<%= asset_path 'img_0518.jpg' %>);
+         height: 100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+       }
+  ul { padding-right: 20px;
+       padding-left: 20px;
+     }
+  li { list-style-position: inside;
+       text-align: center;
+       padding-left: 20px;
+     }
+
+</style>
+<h2>Creating a new character<h2>
 
 <%= form_with model: @character do |f| %>
         <%= f.label :name %>

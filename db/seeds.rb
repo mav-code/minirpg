@@ -44,21 +44,21 @@ start = Hook.create(
     Hook.create(
         job_id: nerd.id,
         prompt: "Try and mediate your self-worth somehow", 
-        description: "You find your solace in video games. Behind the screen, you can showcase your mental superiority, and pick up some breadcrumbs of social interaction. <br><br> You have become a <b>Gamer</b>.", 
+        description: "You find your solace in video games. Behind the screen, you can showcase your mental superiority, and pick up some breadcrumbs of social interaction. You have become a Gamer.", 
         result: {newjob: gamer}
         )
 
     Hook.create(
         job_id: nerd.id,
         prompt: "Bury yourself in a book", 
-        description: "You retreat from our gray world into a vibrant black-and-white wordscape. <br><br>You have become a <b>Bookworm</b>.", 
+        description: "You retreat from our gray world into a vibrant black-and-white wordscape. You have become a Bookworm.", 
         result: {newjob: bookworm}
         )
 
     Hook.create(
         job_id: nerd.id,
         prompt: "Try and socialize", 
-        description: "It's not as hard for a geek to make friends as some might think. But is it worth the cost?.. <br><br>You have become a <b>Theater Kid</b>.", 
+        description: "It's not as hard for a geek to make friends as some might think. But is it worth the cost?.. You have become a Theater Kid.", 
         result: {newjob: actor}
         )
         
@@ -67,7 +67,7 @@ start = Hook.create(
 Hook.create(
     job_id: gamer.id,
     prompt: "Have a fit of loneliness", 
-    description: "Eventually, maybe during a reboot, you have to come face-to-face with your bloated and dead-eyed reflection in the monitor. The hundreth time that happens, you snap. You need a hobby in the physical world, and thanks to your time playing Hearthstone, you know just where to find it. <br><br>You have become a <b>Magic: The Gathering Player</b>. Lose one hundred dollars.", 
+    description: "Eventually, maybe during a reboot, you have to come face-to-face with your bloated and dead-eyed reflection in the monitor. The hundreth time that happens, you snap. You need a hobby in the physical world, and thanks to your time playing Hearthstone, you know just where to find it. You have become a Magic: The Gathering Player. Lose one hundred dollars.", 
     result: {newjob: mtg, wallet: -100}
     )
 Hook.create(

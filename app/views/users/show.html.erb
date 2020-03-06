@@ -20,17 +20,11 @@
    <li>
       <% @user.characters.each do |character| %>
       <%= link_to character.name, character %>
-      <p>Classes: </p>
-      <ul>
-         <li>
-            <% character.jobs.each do |job| %>
-            <p><%= job.name %></p>
-        </li>
+      <h3>Classes </h3>
+          <% character.jobs.each do |job| %>
+          <p align="center"><%= job.name %></p>
+   </li>
             <% end %>
-        <br>
-        </ul>
-    </li>
-    <br>
   <% end %>
 </ul>
 
