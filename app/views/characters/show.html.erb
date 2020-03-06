@@ -1,5 +1,6 @@
+<body>
 <h1> <%= @character.name %> </h1>
-<br>
+
 <br>
 
      Classes: 
@@ -15,5 +16,7 @@
 
 <%= form_for @character do |f| %>
     <%= collection_select(:character, :hook_ids, @character_hooks, :id, :prompt, {:prompt => 'What would you like to do?'}) %>
-    <%= f.submit %>
+    <%= f.submit 'Go!' %>
 <% end %>
+
+</body>
