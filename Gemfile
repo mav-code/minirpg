@@ -60,3 +60,6 @@ gem "rb-readline", "~> 0.5.5"
 gem "bcrypt", "~> 3.1"
 
 gem 'figlet', '~> 1.1'
+
+# this makes relation diagrams (supposedly)
+gem 'rails-erd', group: :development
